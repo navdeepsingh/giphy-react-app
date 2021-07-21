@@ -32,13 +32,20 @@ const SearchForm = ({ setImages }) => {
   return (
     <div>
       <form noValidate>
-        <input type="text" placeholder="Enter keywords" ref={inputRef} />
-        <button type="button" onClick={handleOnClick}>
+        <input
+          type="text"
+          placeholder="Enter keywords"
+          ref={inputRef}
+          data-cy="input-text"
+        />
+        <button type="button" onClick={handleOnClick} data-cy="input-button">
           SEARCH
         </button>
       </form>
       {/* Trending */}
-      <button onClick={handleTrending}>Trendings</button>
+      <button onClick={handleTrending} data-cy="trendings-button">
+        Trendings
+      </button>
     </div>
   );
 };
